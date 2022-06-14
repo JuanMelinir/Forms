@@ -1,4 +1,4 @@
-<div class="container-fluid align-self-center justify-content-center h-100" style="height:100%;">
+<div class="container-fluid mx-auto align-self-center justify-content-center h-100" style="height:100%;">
 <div class='container col-md-3 '>
 <div class='col-auto mb-3'>
 <label class='form-label d-flex justify-content-center align-items-center' for='autoSizingInput'>Nombre</label>

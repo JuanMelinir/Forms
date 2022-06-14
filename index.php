@@ -9,7 +9,7 @@
 </head>
 <body>
     <?php
-    include './forms/grid2x10.php';
+    include './forms/grid2x2.php';
     ?>
 </body>
 </html>
