@@ -9,9 +9,10 @@
 </head>
 <body>
     <?php
-    include './forms/form.php';
-    $form=new Form();
-    echo $form->createGrid(2, 3,["Nombre","Apellido","Edad","Fecha de nacimiento","Ciudad","Provincia"],["txt","txt","number","date","txt","txt"],["txtnombre","txtpellido","intedad","datefecha","txtciudad","txtprovincia"]);
+    include 'formularioDatosVehiculo.php';
+    //$form=new Form();
+    //echo $form->createForm('','','POST',$form->createGrid(2, 3,["Nombre","Apellido","Edad","Fecha de nacimiento","Ciudad","Provincia"],["txt","txt","number","date","txt","txt"],["txtnombre","txtpellido","intedad","datefecha","txtciudad","txtprovincia"]));
     ?>
+
 </body>
 </html>

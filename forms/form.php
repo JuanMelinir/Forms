@@ -9,8 +9,8 @@ a partir de parametros como id, class, etc.
 class Form{
 
     //Form
-    public function createForm(string $class,string $action,string $method,$elemento){
-        $output = "<form class='".$class."' "."action='".$action."'. ".$mehod.">".$elemento."</form>";
+    public function createForm(string $class,string $action,string $method,string $content){
+        $output = "<form class='".$class."' "."action='".$action."' method='".$method."'>".$content."</form>";
 
         return $output;
     }
@@ -20,7 +20,7 @@ class Form{
         $z=0;
         for ($i=0;$i<$x;$i++){
             
-            $output=$output."<div class='row  align-items-center mb-3'>";
+            $output.="<div class='row  align-items-center mb-3'>";
             
             for($j=0;$j<$y;$j++){
                  
@@ -28,14 +28,14 @@ class Form{
                 $id=$ids[$z+$j];
                 $name=$names[$z+$j];
 
-                $output=$output."<div class='col mb-3 ms-3 me-3'>
+                $output.="<div class='col mb-3 ms-3 me-3'>
                 <label class='form-label' for='autoSizingInput'>".$name."</label>
                 <input type='".$type."' class='form-control' id='".$id.$j."' placeholder=''>
                 </div>";
 
             }
              $z=$j;
-            $output=$output."</div>";
+            $output.="</div>";
 
         };
 
