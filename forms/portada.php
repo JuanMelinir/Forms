@@ -1,99 +1,141 @@
+<div class="container-fluid vh-100 ">
 
-<nav class="col-md-2 h-100  navbar bg-primary fixed-top align-items-center">
+<div class='row'>
+<div class="col-1 vh-100 ">
+<nav class="navbar vh-100 navbar-expand-lg bg-primary align-items-center justify-content-center ">
 
-<!-- Links -->
-<ul class="navbar-nav">
-  <li class="nav-item">
-    <a class="nav-link" href="#">Link 1</a>
-  </li>
-  <li class="nav-item">
-    <a class="nav-link" href="#">Link 2</a>
-  </li>
-  <li class="nav-item">
-    <a class="nav-link" href="#">Link 3</a>
-  </li>
-</ul>
-</nav> 
-<div class="col-md-10 offset-md-6">
-<div class='row  align-items-center mb-3'>
+    <div class="col">
+      <a class="nav-item nav-link " href="#"><h6>Datos del vehiculo</h6></a>
+      <a class="nav-item nav-link" href="#"><h6>Datos del titular</h6></a>
+      <a class="nav-item nav-link" href="#"><h6>Datos del conductor</h6></a>
+      <a class="nav-item nav-link" href="#"><h6>Tarifa</h6></a>
+    </div>
+</nav>
+</div>
 
-<div class="row container-fluid mx-auto align-self-center justify-content-center h-100" style="height:100%;">
-
+<div class="col d-flex justify-content-center align-items-center">
+<div class="col-8">
+<div class='row mb-4 ms-4 justify-content-center align-items-center'>
 <div class="col">
 <div class='col mb-3 ms-3'>
-<label class='form-label' for='autoSizingInput'>Dominio</label>
+<label class='form-label' for='autoSizingInput'><h6>Provincia</h6></label>
 <input type='text' class='form-control' id='txt$id' placeholder=''>
 </div>
 <div class='col mb-3 ms-3'>
-<label class='form-label' for='autoSizingInput'>Marca</label>
-<input type='text' class='form-control' id='txt$id' placeholder=''>
-</div>
-<div class='col mb-3 ms-3'>
-<label class='form-label' for='autoSizingInput'>Provincia</label>
-<input type='text' class='form-control' id='txt$id' placeholder=''>
-</div>
-<div class='col mb-3 ms-3'>
-<label class='form-label' for='autoSizingInput'>Motor marca</label>
-<input type='text' class='form-control' id='txt$id' placeholder=''>
-</div>
-<div class='col mb-3 ms-3'>
-<label class='form-label' for='autoSizingInput'>Motor año</label>
-<input type='text' class='form-control' id='txt$id' placeholder=''>
-</div>
-<div class='col mb-3 ms-3'>
-<label class='form-label' for='autoSizingInput'>Chasis marca</label>
-<input type='text' class='form-control' id='txt$id' placeholder=''>
-</div>
-<div class='col mb-3 ms-3'>
-<label class='form-label' for='autoSizingInput'>Chasis año</label>
-<input type='text' class='form-control' id='txt$id' placeholder=''>
-</div>
-<div class='col mb-3 ms-3'>
-<label class='form-label' for='autoSizingInput'>Tipo vehiculo</label>
-<input type='text' class='form-control' id='txt$id' placeholder=''>
-</div>
-<div class='col mb-3 ms-3'>
-<label class='form-label' for='autoSizingInput'>Nro.rec.patente</label>
+<label class='form-label' for='autoSizingInput'><h6>Tipo de vehiculo</h6></label>
 <input type='text' class='form-control' id='txt$id' placeholder=''>
 </div>
 </div>
 
 <div class="col">
 <div class='col mb-3 me-3'>
-<label class='form-label' for='autoSizingInput'>Año</label>
+<label class='form-label' for='autoSizingInput'><h6>Localidad</h6></label>
 <input type='text' class='form-control' id='txt$id' placeholder=''>
 </div>
 <div class='col mb-3 me-3'>
-<label class='form-label' for='autoSizingInput'>Modelo</label>
+<label class='form-label' for='autoSizingInput'><h6>Año</h6></label>
+<input type='text' class='form-control' id='txt$id' placeholder=''>
+</div>
+</div>
+
+<div class='d-flex justify-content-center align-items-center  mb-3'>
+<button type='button' class='btn btn-primary'>Siguiente</button>
+</div>
+</div>
+</div>
+
+</div>
+
+<div class="container-fluid vh-100 ">
+
+<div class='row'>
+<div class="col-1 vh-100 ">
+<nav class="navbar vh-100 navbar-expand-lg bg-primary align-items-center justify-content-center ">
+
+    <div class="col">
+      <a class="nav-item nav-link " href="#"><h6>Datos del vehiculo</h6></a>
+      <a class="nav-item nav-link" href="#"><h6>Datos del titular</h6></a>
+      <a class="nav-item nav-link" href="#"><h6>Datos del conductor</h6></a>
+      <a class="nav-item nav-link" href="#"><h6>Tarifa</h6></a>
+    </div>
+</nav>
+</div>
+
+<div class="col d-flex justify-content-center align-items-center">
+<div class="col-8">
+<div class='row mb-4 ms-4 justify-content-center align-items-center'>
+<div class="col">
+<div class='col mb-3 ms-3'>
+<label class='form-label' for='autoSizingInput'><h6>Provincia</h6></label>
+<input type='text' class='form-control' id='txt$id' placeholder=''>
+</div>
+<div class='col mb-3 ms-3'>
+<label class='form-label' for='autoSizingInput'><h6>Tipo de vehiculo</h6></label>
+<input type='text' class='form-control' id='txt$id' placeholder=''>
+</div>
+</div>
+
+<div class="col">
+<div class='col mb-3 me-3'>
+<label class='form-label' for='autoSizingInput'><h6>Localidad</h6></label>
 <input type='text' class='form-control' id='txt$id' placeholder=''>
 </div>
 <div class='col mb-3 me-3'>
-<label class='form-label' for='autoSizingInput'>Localidad</label>
+<label class='form-label' for='autoSizingInput'><h6>Año</h6></label>
+<input type='text' class='form-control' id='txt$id' placeholder=''>
+</div>
+</div>
+
+<div class='d-flex justify-content-center align-items-center  mb-3'>
+<button type='button' class='btn btn-primary me-3'>Anterior</button><button type='button' class='btn btn-primary ms-3'>Siguiente</button>
+</div>
+</div>
+</div>
+
+</div>
+<div class="container-fluid vh-100 ">
+
+<div class='row'>
+<div class="col-1 vh-100 ">
+<nav class="navbar vh-100 navbar-expand-lg bg-primary align-items-center justify-content-center ">
+
+    <div class="col">
+      <a class="nav-item nav-link " href="#"><h6>Datos del vehiculo</h6></a>
+      <a class="nav-item nav-link" href="#"><h6>Datos del titular</h6></a>
+      <a class="nav-item nav-link" href="#"><h6>Datos del conductor</h6></a>
+      <a class="nav-item nav-link" href="#"><h6>Tarifa</h6></a>
+    </div>
+</nav>
+</div>
+
+<div class="col d-flex justify-content-center align-items-center">
+<div class="col-8">
+<div class='row mb-4 ms-4 justify-content-center align-items-center'>
+<div class="col">
+<div class='col mb-3 ms-3'>
+<label class='form-label' for='autoSizingInput'><h6>Provincia</h6></label>
+<input type='text' class='form-control' id='txt$id' placeholder=''>
+</div>
+<div class='col mb-3 ms-3'>
+<label class='form-label' for='autoSizingInput'><h6>Tipo de vehiculo</h6></label>
+<input type='text' class='form-control' id='txt$id' placeholder=''>
+</div>
+</div>
+
+<div class="col">
+<div class='col mb-3 me-3'>
+<label class='form-label' for='autoSizingInput'><h6>Localidad</h6></label>
 <input type='text' class='form-control' id='txt$id' placeholder=''>
 </div>
 <div class='col mb-3 me-3'>
-<label class='form-label' for='autoSizingInput'>Motor nro</label>
+<label class='form-label' for='autoSizingInput'><h6>Año</h6></label>
 <input type='text' class='form-control' id='txt$id' placeholder=''>
 </div>
-<div class='col mb-3 me-3'>
-<label class='form-label' for='autoSizingInput'>Tipo combustible</label>
-<input type='text' class='form-control' id='txt$id' placeholder=''>
 </div>
-<div class='col mb-3 me-3'>
-<label class='form-label' for='autoSizingInput'>Chasis nro</label>
-<input type='text' class='form-control' id='txt$id' placeholder=''>
+
+<div class='d-flex justify-content-center align-items-center  mb-3'>
+<button type='button' class='btn btn-primary me-3'>Anterior</button><button type='button' class='btn btn-primary ms-3'>Siguiente</button>
 </div>
-<div class='col mb-3 me-3'>
-<label class='form-label' for='autoSizingInput'>Nro ejes</label>
-<input type='text' class='form-control' id='txt$id' placeholder=''>
-</div>
-<div class='col mb-3 me-3'>
-<label class='form-label' for='autoSizingInput'>Compañia seguro</label>
-<input type='text' class='form-control' id='txt$id' placeholder=''>
-</div>
-<div class='col mb-3 me-3'>
-<label class='form-label' for='autoSizingInput'>Nro poliza</label>
-<input type='text' class='form-control' id='txt$id' placeholder=''>
 </div>
 </div>
 
