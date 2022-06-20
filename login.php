@@ -13,7 +13,7 @@
     <?php
     include './forms/registro.php';
     ?>
-
+<script src="./forms/js/script.js"></script>
 <script src="./forms/js/validacion.js"></script>
 </body>
 </html>
