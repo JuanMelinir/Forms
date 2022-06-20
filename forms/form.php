@@ -47,14 +47,55 @@ class Form{
 
         return $output;
     }
+    //row
+    public function createRow(string $id,string $class,string $content,string $additional = null){
+        $output = "<div id='".$id."' class='row".$class."' " .$additional.">".$content."</div>";
 
-    //Nav
-    public function createNav(string $id,string $class,string $content,string $additional = null){
-        $output = "<nav id='".$id."' class='".$class."' ".$additional.">".$content."</nav>";
+        return $output;
+    }
+      //col
+      public function createCol(string $id,string $class,string $content,string $additional = null){
+        $output = "<div id='".$id."' class='col".$class."' ".$additional.">".$content."</div>";
+
+        return $output;
+    }
+    //Stepper
+    public function createStepper(string $id,string $class,string $content,string $additional = null){
+        $output = "<div id='".$id."' class='stepper-wrapper".$class."' ".$additional.">".$content."</div>";
+
+        return $output;
+    }
+     //Stepper-counter
+     public function createStepperItem(string $id,string $class,string $count,string $additional = null){
+        $output = "<div id='".$id."' class='stepper-item".$class."' ".$additional."><div class='step-counter'>".$count."</div></div>";
 
         return $output;
     }
 
+    //Nav-vertical
+    public function createNavV(string $id,string $class,string $content,string $additional = null){
+        $output = "<nav id='".$id."' class='".$class."' ".$additional.">".$content."</nav>";
+
+        return $output;
+    }
+    //Nav-horizontal
+    public function createNavH(string $id,string $class,string $content,string $additional = null){
+    $output = "<nav id='".$id."' class='".$class."' ".$additional.">".$content."</nav>";
+
+    return $output;
+}
+ //icon
+ public function createIcon(string $id,string $class,string $content,string $additional = null){
+    $output = "<i id='".$id."' class='".$class."' ".$additional.">".$content."</i>";
+
+    return $output;
+}
+ //link
+ public function createLink(string $id,string $link,string $class,string $content,string $additional = null){
+    $output = "<a id='".$id."' href='".$link."' class='".$class."' ".$additional.">".$content."</a>";
+
+    return $output;
+}
     //Span
     public function createSpan(string $id,string $class,string $content,string $additional = null){
         $output = "<span id='".$id."' class='".$class."' ".$additional.">".$content."</span>";
@@ -62,6 +103,12 @@ class Form{
         return $output;
     }
 
+    //p
+    public function createP(string $id,string $class,string $content,string $additional = null){
+        $output = "<p id='".$id."' class='".$class."' ".$additional.">".$content."</p>";
+
+        return $output;
+    }
     //Ul
     public function createUl(string $id,string $class,string $content,string $additional = null){
         $output = "<ul id='".$id."' class='".$class."' ".$additional.">".$content."</ul>";
@@ -102,6 +149,24 @@ class Form{
 
         return $output;
     }
+    //Select
+    public function createSelect(string $label,string $idSelect,string $class,string $option_selected,Array $options,string $additional = null){
+        $output = "";
+        if($label!=""){
+            $output .= $this->createLabel($label,$label,"");
+        }
+        $output .= "<select id='".$idSelect."' name='".$idSelect."' class='form-select".$class."'  arial-label='".$label."' ".$additional."/>";
+        $output .= "<option selected>".$option_selected."</option>";
+        $i=1;
+        foreach ($options as $option) {
+            $output .= "<option value=".$i.">".$option."</option>";
+            $i++;
+          }
+          $output .="</select>";
+
+        return $output;
+    }
+
 /*
     //Input-group
     public function createInputGroup(string $label,string $idInput,string $type,string $class,string $placeholder,string $value,string $beforeInput,string $afterInput,string $additional = null){
