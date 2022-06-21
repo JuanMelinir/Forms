@@ -70,7 +70,7 @@ echo $form->createCol("step1"," d-flex justify-content-center align-items-center
 $form->createCol("","-8",
 
 $form->createStepper("","",
-$form->createStepperItem(""," active","1",null).
+$form->createStepperItem(""," completed","1",null).
 $form->createStepperItem("","","2",null).
 $form->createStepperItem("","","3",null).
 $form->createStepperItem("","","4",null).
@@ -79,12 +79,12 @@ $form->createStepperItem("","","5",null)
 
 $form->createRow(""," mb-4 ms-4 justify-content-center align-items-center",
 
-$form->createCol(""," mb-3 ms-3",
-$form->createRow("grupo__nombre"," formulario__grupo-input",
+$form->createCol("grupo__nombre"," mb-3 ms-3",
+$form->createRow(""," formulario__grupo-input",
 $form->createInput("Nombre","nombre","txt","","","",null).
 $form->createIcon("","formulario__validacion-estado fas fa-times-circle","",null),
 null).
-$form->createP("","formulario__input-error","El nombre tiene que ser de 4 a 16 dígitos y solo puede contener letras.",null)
+$form->createP("","formulario__input-error","El nombre debe contener de 1 a 16 letras.",null)
 ).
 
 $form->createCol(""," mb-3 ms-3",
@@ -92,9 +92,8 @@ $form->createRow("grupo__apellido"," formulario__grupo-input",
 $form->createInput("Apellido","apellido","txt","","","",null).
 $form->createIcon("","formulario__validacion-estado fas fa-times-circle","",null),
 null).
-$form->createP("","formulario__input-error","El apellido tiene que ser de 4 a 16 dígitos y solo puede contener letras.",null)
+$form->createP("","formulario__input-error","El apellido debe contener de 1 a 16 letras.",null)
 ),
-
 null).
 
 $form->createRow(""," mb-4 ms-4 justify-content-center align-items-center",
@@ -122,17 +121,10 @@ $form->createLink("","#step2","",$form->createButton("Siguiente","btnSiguiente",
  null)
 
 ,null)
-
+  
 ,null)
 
-
 ,null)
-
-
-
-
-
-
 
 ?>
 
@@ -148,7 +140,7 @@ $form->createCol("","-8",
 
 $form->createStepper("","",
 $form->createStepperItem(""," completed","1",null).
-$form->createStepperItem(""," active","2",null).
+$form->createStepperItem(""," completed","2",null).
 $form->createStepperItem("","","3",null).
 $form->createStepperItem("","","4",null).
 $form->createStepperItem("","","5",null)
@@ -189,7 +181,7 @@ $form->createCol("","-8",
 $form->createStepper("","",
 $form->createStepperItem(""," completed","1",null).
 $form->createStepperItem(""," completed","2",null).
-$form->createStepperItem(""," active","3",null).
+$form->createStepperItem(""," completed","3",null).
 $form->createStepperItem("","","4",null).
 $form->createStepperItem("","","5",null)
 ,"",null).
@@ -229,7 +221,7 @@ $form->createStepper("","",
 $form->createStepperItem(""," completed","1",null).
 $form->createStepperItem(""," completed","2",null).
 $form->createStepperItem(""," completed","3",null).
-$form->createStepperItem(""," active","4",null).
+$form->createStepperItem(""," completed","4",null).
 $form->createStepperItem("","","5",null)
 ,"",null).
 

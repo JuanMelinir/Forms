@@ -32,7 +32,6 @@
     flex-direction: column;
     align-items: center;
     flex: 1;
-  
     @media (max-width: 768px) {
       font-size: 12px;
     }
@@ -41,7 +40,7 @@
   .stepper-item::before {
     position: absolute;
     content: "";
-    border-bottom: 2px solid #ccc;
+    border-bottom: 2px solid rgb(144, 142, 250);
     width: 100%;
     top: 20px;
     left: -50%;
@@ -51,7 +50,7 @@
   .stepper-item::after {
     position: absolute;
     content: "";
-    border-bottom: 2px solid #ccc;
+    border-bottom: 2px solid rgb(196, 198, 201);
     width: 100%;
     top: 20px;
     left: 50%;
@@ -67,22 +66,22 @@
     width: 40px;
     height: 40px;
     border-radius: 50%;
-    background: rgb(212, 211, 211);
+    background: rgb(96, 136, 201);
     margin-bottom: 6px;
   }
   
-  .stepper-item.active {
+  .stepper-item .active .step-counter {
     font-weight: bold;
   }
   
   .stepper-item.completed .step-counter {
-    background-color: #3e75ee;
+    background-color: #53ee3e;
   }
   
   .stepper-item.completed::after {
     position: absolute;
     content: "";
-    border-bottom: 2px solid #3e75ee;
+    border-bottom: 2px solid #53ee3e;
     width: 100%;
     top: 20px;
     left: 50%;
@@ -273,7 +272,6 @@ a.selected{
 .formulario__validacion-estado {
   position: absolute;
 	right: 20px;
-
 	z-index: 50;
 	font-size: 16px;
 	opacity: 0;
@@ -283,12 +281,21 @@ a.selected{
 	opacity: 1;
 }
 
-.formulario__grupo-incorrecto .formulario__label {
+.formulario__grupo-incorrecto .formulario__validacion-estado {
 	color: #bb2929;
+  opacity: 1;
 }
-.fa-check-circle{
-  color: #1ed12d;
+.formulario__input-error {
+	right: 20px;
+  z-index: 200;
+	font-size: 16px;
+  visibility: hidden;
 }
-.fa-times-circle{
-  color: #bb2929;
+/*
+.formulario__input-error .activo{
+  position: absolute;
+	right: 20px;
+	z-index: 50;
+	font-size: 16px;
+	opacity: 1;
 }
