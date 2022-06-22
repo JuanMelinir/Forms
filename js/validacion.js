@@ -87,6 +87,7 @@ const expresiones={
 	nombre: /^[a-zA-ZÀ-ÿ\s]{1,16}$/, // Letras y espacios, pueden llevar acentos.
 	//password: /^.{4,12}$/, // 4 a 12 digitos.
     apellido: /^[a-zA-ZÀ-ÿ\s]{1,40}$/,
+	fecha:/^\d{4}\-(0?[1-9]|1[012])\-(0?[1-9]|[12][0-9]|3[01])$//*/^(0[1-9]|1[0-2])\/(0[1-9]|1\d|2\d|3[01])\/(0[1-9]|1[1-9]|2[1-9])$/----/^(0[1-9]|[1-2]\d|3[01])(\/)(0[1-9]|1[012])\2(\d{4})$/*/,
 	nacionalidad: /^[a-zA-ZÀ-ÿ\s]{1,40}$/,
     domicilio: /^[a-zA-ZÀ-ÿ\s]{1,40}$/,
 	correo: /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/,
@@ -105,7 +106,11 @@ const validarFormulario = (e) => {
 			validarCampo(expresiones.apellido, e.target, 'apellido');
 		break;
 		case "nacionalidad":
-			validarCampo(expresiones.apellido, e.target, 'nacionalidad');
+			validarCampo(expresiones.nacionalidad, e.target, 'nacionalidad');
+		break;
+		case "fecha":
+			console.log("entra a validar fecha");
+			validarCampo(expresiones.fecha, e.target, 'fecha');
 		break;
 		case "password":
 			validarCampo(expresiones.password, e.target, 'password');
@@ -147,7 +152,7 @@ const validarFormulario1 = (e) => {
 }
 
 const validarCampo = (expresion, input, campo) => {
-
+console.log("valor input: "+input.value);
 	if(expresion.test(input.value)){
 
 		document.getElementById(`grupo__${campo}`).classList.remove('formulario__grupo-incorrecto');

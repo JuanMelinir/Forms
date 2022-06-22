@@ -52,7 +52,7 @@ include 'form.php';
 <?php
 //Llamo a la libreria de forms
 $form=new Form();
-//Inicio columna contenedora
+//Inicio columna contenedora step 1
 echo $form->createCol("step1"," d-flex justify-content-center align-items-center vh-100",
 //Inicio columna contenedora de inputs
 $form->createCol("","-8",
@@ -99,7 +99,7 @@ $form->createInput("Nacionalidad","nacionalidad","txt","","","",null).
 $form->createIcon("","formulario__validacion-estado fas fa-times-circle","",null),
 null).
 //parrafo que aparece cuando hay algún error
-$form->createP("","formulario__input-error","La nacionalidad tiene que ser de 4 a 16 dígitos y solo puede contener letras.",null)
+$form->createP("","formulario__input-error","La nacionalidad tiene que ser de 4 a 16 letras.",null)
 ).
 //Fin columna contenedora de input
 //Inicio columna contenedora de input
@@ -134,7 +134,7 @@ $form->createLink("","#step2","",$form->createButton("Siguiente","btnSiguiente",
 </div>
 <?php
 $form=new Form();
-//Inicio columna contenedora
+//Inicio columna contenedora step 2
 echo $form->createCol("step2"," d-flex justify-content-center align-items-center vh-100",
 //Inicio columna contenedora de inputs
 $form->createCol("","-8",
@@ -149,11 +149,13 @@ $form->createStepperItem("","","5",null)
 //Inicio fila contenedora de inputs
 $form->createRow(""," mb-4 ms-4 justify-content-center align-items-center",
 //Inicio columna contenedora de input
-$form->createCol(""," mb-3 ms-3",$form->createSelect("Provincia","selectProvincia","","",["Neuquén","Río Negro","Mendoza","La Pampa","Chubut"],null)
+$form->createCol(""," mb-3 ms-3",
+$form->createSelect("Provincia","selectProvincia","","",["Neuquén","Río Negro","Mendoza","La Pampa","Chubut"],null)
 ).
 //Fin columna contenedora de input
 //Inicio columna contenedora de input
-$form->createCol(""," mb-3 ms-3",$form->createSelect("Ciudad","selectCiudad","","",["Neuquén","Chos malal","Aluminé","Andacollo","Añelo"],null)
+$form->createCol(""," mb-3 ms-3",
+$form->createSelect("Ciudad","selectCiudad","","",["Neuquén","Chos malal","Aluminé","Andacollo","Añelo"],null)
 ),
 //Fin columna contenedora de input
 null).
@@ -188,7 +190,7 @@ null),
 
 ,null).
 
-//Inicio columna contenedora
+//Inicio columna contenedora step 3
 $form->createCol("step3"," d-flex justify-content-center align-items-center vh-100",
 //Inicio columna contenedora de inputs
 $form->createCol("","-8",
