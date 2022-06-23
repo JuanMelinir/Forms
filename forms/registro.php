@@ -149,13 +149,13 @@ $form->createStepperItem("","","5",null)
 //Inicio fila contenedora de inputs
 $form->createRow(""," mb-4 ms-4 justify-content-center align-items-center",
 //Inicio columna contenedora de input
-$form->createCol(""," mb-3 ms-3",
-$form->createSelect("Provincia","selectProvincia","","",["Neuquén","Río Negro","Mendoza","La Pampa","Chubut"],null)
+$form->createCol("grupo_-provincia"," mb-3 ms-3",
+$form->createSelect("Provincia","provincia","","",["Neuquén","Río Negro","Mendoza","La Pampa","Chubut"],null)
 ).
 //Fin columna contenedora de input
 //Inicio columna contenedora de input
-$form->createCol(""," mb-3 ms-3",
-$form->createSelect("Ciudad","selectCiudad","","",["Neuquén","Chos malal","Aluminé","Andacollo","Añelo"],null)
+$form->createCol("grupo_-localidad"," mb-3 ms-3",
+$form->createSelect("Localidad","localidad","","",["Neuquén","Chos malal","Aluminé","Andacollo","Añelo"],null)
 ),
 //Fin columna contenedora de input
 null).

@@ -1,73 +1,4 @@
-const esLetra = (caracter) => {
-    let ascii = caracter.toUpperCase().charCodeAt(0);
-    return ascii > 64 && ascii < 91;
-};
-function validarFormulario3(evento) {
-    evento.preventDefault();
-    var usuario = document.getElementById('usuario').value;
-    if(usuario.length == 0) {
-      alert('No has escrito nada en el usuario');
-      return;
-    }
-    var dominio = document.getElementById('txt_dominio').value;
-    if (clave.length ==0) {
-        alert('No has escrito nada en el dominio'); 
-      return;
-    }else if(clave.length<7 || clave.length>9 ){
-        alert('El dominio no es válido');
-        return;
-    }else if (clave.length==7 ){
-    var valor=true;
-    var i=0;
-        // Probar
-        while(valor==true&&i<3){
-            valor=esLetra(dominio[i]);
-            i++;
-        }
-        if(valor==true&&dominio[i]=="-"){
-            i++;
-            while(valor==true&&i<7){
-                valor=esLetra(dominio[i]);
-                i++;
-            }
-            if(valor!=true){
-                alert('El dominio no es válido');
-            }
-        }else{
-            valor=false;
-            alert('El dominio no es válido');
-        }
-        return;
-    }else if(clave.length==8){
-        var valor=true;
-        var i=0;
-            // Probar
-            while(valor==true&&i<2){
-                valor=esLetra(dominio[i]);
-                i++;
-            }
-            if(valor==true&&dominio[i]=="-"){
-                i++;
-                while(valor==true&&i<6){
-                    valor=esLetra(dominio[i]);
-                    i++;
-                }
-                if(valor==true&&dominio[i]=="-"){
-                    i++;
-                    while(valor==true&&i<8){
-                        valor=esLetra(dominio[i]);
-                        i++;
-                    }
-                    if(valor!=true){
-                        alert('El dominio no es válido');
-                    }
-                }
-            }else{
-                valor=false;
-                alert('El dominio no es válido');
-            }
-    }
-}
+
 const campos = {
 	usuario: false,
 	nombre: false,
@@ -76,6 +7,8 @@ const campos = {
 	correo: false,
 	telefono: false,
 	fecha: false,
+	provincia:false,
+	localidad:false
 
 }
 const formulario = document.getElementById('step1');
@@ -83,15 +16,15 @@ const inputs=document.querySelectorAll(`#step1 input`);
 console.log(inputs);
 
 const expresiones={
-    //usuario: /^[a-zA-Z0-9\_\-]{4,16}$/, // Letras, numeros, guion y guion_bajo
-	nombre: /^[a-zA-ZÀ-ÿ\s]{1,16}$/, // Letras y espacios, pueden llevar acentos.
-	//password: /^.{4,12}$/, // 4 a 12 digitos.
+	nombre: /^[a-zA-ZÀ-ÿ\s]{1,16}$/, 
     apellido: /^[a-zA-ZÀ-ÿ\s]{1,40}$/,
-	fecha:/^\d{4}\-(0?[1-9]|1[012])\-(0?[1-9]|[12][0-9]|3[01])$//*/^(0[1-9]|1[0-2])\/(0[1-9]|1\d|2\d|3[01])\/(0[1-9]|1[1-9]|2[1-9])$/----/^(0[1-9]|[1-2]\d|3[01])(\/)(0[1-9]|1[012])\2(\d{4})$/*/,
+	fecha:/^\d{4}\-(0?[1-9]|1[012])\-(0?[1-9]|[12][0-9]|3[01])$/,
 	nacionalidad: /^[a-zA-ZÀ-ÿ\s]{1,40}$/,
+	provincia: /^[a-zA-ZÀ-ÿ\s]{1,40}$/,
+	localidad: /^[a-zA-ZÀ-ÿ\s]{1,40}$/,
     domicilio: /^[a-zA-ZÀ-ÿ\s]{1,40}$/,
 	correo: /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/,
-	telefono: /^\d{7,14}$/, // 7 a 14 numeros.
+	telefono: /^\d{7,14}$/,
     codigopostal: /^[0-9\s]{4,7}$/
 }
 
@@ -109,8 +42,13 @@ const validarFormulario = (e) => {
 			validarCampo(expresiones.nacionalidad, e.target, 'nacionalidad');
 		break;
 		case "fecha":
-			console.log("entra a validar fecha");
 			validarCampo(expresiones.fecha, e.target, 'fecha');
+		break;
+		case "provincia":
+			validarCampo(expresiones.provincia, e.target, 'provincia');
+		break;
+		case "localidad":
+			validarCampo(expresiones.localidad, e.target, 'localidad');
 		break;
 		case "password":
 			validarCampo(expresiones.password, e.target, 'password');
@@ -152,7 +90,6 @@ const validarFormulario1 = (e) => {
 }
 
 const validarCampo = (expresion, input, campo) => {
-console.log("valor input: "+input.value);
 	if(expresion.test(input.value)){
 
 		document.getElementById(`grupo__${campo}`).classList.remove('formulario__grupo-incorrecto');
