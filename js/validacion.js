@@ -11,6 +11,8 @@ const campos = {
 	localidad:false
 
 }
+
+
 const formulario = document.getElementById('step1');
 const inputs=document.querySelectorAll(`#step1 input`); 
 console.log(inputs);
@@ -91,6 +93,23 @@ const validarFormulario1 = (e) => {
 
 const validarCampo = (expresion, input, campo) => {
 	if(expresion.test(input.value)){
+
+		document.getElementById(`grupo__${campo}`).classList.remove('formulario__grupo-incorrecto');
+		document.getElementById(`grupo__${campo}`).classList.add('formulario__grupo-correcto');
+		document.querySelector(`#grupo__${campo} i`).classList.add('fa-check-circle');
+		document.querySelector(`#grupo__${campo} i`).classList.remove('fa-times-circle')	
+		document.querySelector(`#grupo__${campo} .formulario__input-error`).style.visibility = "hidden";
+	} else {
+		document.getElementById(`grupo__${campo}`).classList.add('formulario__grupo-incorrecto');
+		document.getElementById(`grupo__${campo}`).classList.remove('formulario__grupo-correcto');
+		document.querySelector(`#grupo__${campo} i`).classList.remove('fa-check-circle');
+		document.querySelector(`#grupo__${campo} i`).classList.add('fa-times-circle');
+        document.querySelector(`#grupo__${campo} .formulario__input-error`).style.visibility = "visible";
+		campos[campo] = false;
+	}
+}
+const validarSelect = (select) => {
+	if((!select.selectedIndex==null&&!select.selectedIndex==0)){
 
 		document.getElementById(`grupo__${campo}`).classList.remove('formulario__grupo-incorrecto');
 		document.getElementById(`grupo__${campo}`).classList.add('formulario__grupo-correcto');
